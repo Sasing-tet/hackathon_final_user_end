@@ -21,7 +21,7 @@ class _ContainerzState extends State<Containerz> {
         children: 
           volunteeringOrgs.where((element) => element['organizationType'] == 'Non-profit').map((e)=>  Padding(
             padding: const EdgeInsets.symmetric(horizontal:8.0),
-            child: ContainerCard(lists: e['organizationName']),
+            child: ContainerCard(lists: e['organizationName'],desc:  e['description'],cat:  e['category'],orgT:  e['organizationType'], ),
           )).toList()   
     
         
