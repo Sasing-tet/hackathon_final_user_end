@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
         body: TabBarView(children: [
           Homie(),
+          Container()
         ]),
       
       ),

@@ -19,7 +19,7 @@ class _ContainerzState extends State<Containerz> {
       scrollDirection: Axis.horizontal,
       child: Row(
         children: 
-          volunteeringEvents.where((element) => element['organizationType'] != 'Government').map((e)=>  Padding(
+          volunteeringOrgs.where((element) => element['organizationType'] == 'Non-profit').map((e)=>  Padding(
             padding: const EdgeInsets.symmetric(horizontal:8.0),
             child: ContainerCard(lists: e['organizationName']),
           )).toList()   
