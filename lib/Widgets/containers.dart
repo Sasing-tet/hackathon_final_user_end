@@ -18,14 +18,18 @@ class _ContainerzState extends State<Containerz> {
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-        children: 
-          volunteeringOrgs.where((element) => element['organizationType'] == 'Non-profit').map((e)=>  Padding(
-            padding: const EdgeInsets.symmetric(horizontal:8.0),
-            child: ContainerCard(lists: e['organizationName'],desc:  e['description'],cat:  e['category'],orgT:  e['organizationType'], ),
-          )).toList()   
-    
-        
-      ),
+          children: volunteeringOrgs
+              .where((element) => element['organizationType'] == 'Non-profit')
+              .map((e) => Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    child: ContainerCard(
+                      lists: e['organizationName'],
+                      desc: e['description'],
+                      cat: e['category'],
+                      orgT: e['organizationType'],
+                    ),
+                  ))
+              .toList()),
     );
   }
 }
